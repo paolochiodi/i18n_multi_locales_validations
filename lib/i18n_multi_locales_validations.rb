@@ -11,7 +11,7 @@ module ActiveRecord
         else
           locales.each do |locale|
             value = @base.respond_to?(attr.to_s) ? @base.send(attr.to_s, locale) : @base[attr.to_s]
-            add(attr, :blank, :default => custom_message) if value.blank?
+            add("#{attr}_#{locale}", :blank, :default => custom_message) if value.blank?
           end
         end
       end
@@ -38,7 +38,7 @@ module ActiveRecord
               options[:locale].each do |locale|
                 value = record.send(attr, locale)
                 next if (value.nil? && options[:allow_nil]) || (value.blank? && options[:allow_blank])
-                yield record, attr, value
+                yield record, "#{attr}_#{locale}", value
               end
             end
           end
