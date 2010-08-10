@@ -1,7 +1,10 @@
 I18n Multi Locales Validations
 ==============================
 
-i18n_multi_locales_validations is a plugin by Sébastien Grosjean (aka ZenCocoon <http://zencocoon.com>)
+i18n_multi_locales_validations is a plugin by Sébastien Grosjean (aka ZenCocoon http://zencocoon.com)
+this fork add some customization by Paolo Chiodi:
+
+* report errors on attribute_locale instead of attribute
 
 
 I18n Multi Locales Validations functionality
@@ -25,8 +28,6 @@ WARNING
 =======
 
 This is still under heavy development, use at your own risk
-
-NOTICE : Error message are still not properly handled as doesn't refer to the specific locale
 
 
 I18n Multi Locales Validations usage
